@@ -1,0 +1,25 @@
+td {
+	width:300px;
+	height:100px;
+	text-align: center;
+}
+
+table, td {
+	border: 1px #70b8ff dashed;
+}
+
+tr {
+	background-color: #FFE4E1;
+}
+
+header {
+	background-color: #ADD8E6;
+}
+
+.gray {
+	background-color: #D3D3D3;
+}
+
+.blue {
+	background-color: #ADD8E6;
+}
