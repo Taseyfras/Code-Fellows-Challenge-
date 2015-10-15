@@ -9,32 +9,42 @@ the capabilities of your library.*/
 
 /*require tells main.js to import functions from the named modules*/
 var Book = require("./Books.js").Book;
-var AllBooks = require("./Books.js").AllBooks;
 var Shelf = require("./Shelves.js").Shelf;
-var AllShelves = require("./Shelves.js").AllShelves;
 var Library = require("./Library.js").Library;
 
+var MainLibrary = new Library();
 
+var Top = new Shelf();
+var Middle = new Shelf();
+var Bottom = new Shelf();
+var Side = new Shelf();
 
-/*logs all the shelves that were added in the Library to the console*/
-console.log(AllShelves);
+MainLibrary.AddShelf(Top);
+MainLibrary.AddShelf(Middle);
+MainLibrary.AddShelf(Bottom);
+MainLibrary.AddShelf(Side);
 
+/*new Book is the keyword to invoke "Book" the constructor function*/
+var Middlemarch = new Book ("Middlemarch", "Eliot", "George");
+var DifferentSeasons = new Book ("Different Seasons", "King", "Stephen");
+var ThePowerBroker = new Book ("The Power Broker", "Caro", "Robert");
+var KeepTheRiverOnYourRight = new Book ("Keep the River on Your Right", "Schneebaum", "Tobias");
+var TrainDreams = new Book ("Train Dreams", "Johnson", "Denis");
+var IsaDoesIt = new Book ("Isa Does It", "Moskowitz", "Isa");
+var TheMasterAndMargarita = new Book ("The Master and Margarita", "Bulgakov", "Mikhail");
+var GoodOmens = new Book ("Good Omens", "Gaiman", "Neil");
+var GlitterAndGlue = new Book ("Glitter and Glue", "Corrigan", "Kelly");
+var DailyRituals = new Book ("Daily Rituals: How Artists Work", "Currey", "Mason");
 
-/*loops through "AllShelves" getting the "ShelfName" to see if it is equal to "Side"*/
-for (var i = 0; i < AllShelves.length; i++)
-    if (AllShelves[i].ShelfName === "Side") { 
-/*i is a placeholder- at the position "Side" one item is removed from "AllShelves"*/
-        AllShelves.splice(i, 1);
-    }
-/*logs all the shelves excluding the one we just removed*/
-console.log(AllShelves);
+Top.AddBook(Middlemarch);
+Top.AddBook(DifferentSeasons);
+Top.AddBook(ThePowerBroker);
+Middle.AddBook(KeepTheRiverOnYourRight);
+Middle.AddBook(TrainDreams);
+Middle.AddBook(IsaDoesIt);
+Bottom.AddBook(TheMasterAndMargarita);
+Bottom.AddBook(GoodOmens);
+Bottom.AddBook(GlitterAndGlue);
+Side.AddBook(DailyRituals);
 
-
-console.log(AllBooks);
-
-for (var i = 0; i < AllBooks.length; i++)
-    if (AllBooks[i].title === "Daily Rituals: How Artists Work") { 
-        AllBooks.splice(i, 1);
-    }
-
-console.log(AllBooks);
+console.log(MainLibrary);

@@ -1,15 +1,14 @@
-var AllShelves = [];
+function Shelf() {
 
-var Shelf = function(ShelfName) { 
+	this.AddBook = function(book) {
 
-this.ShelfName = ShelfName;
-AllShelves.push(this);
+		this.books.push(book);
 
-
+	}
+	this.books = [];
 }
 
+module.exports.Shelf = Shelf;
 
-module.exports.Shelf= Shelf;
-module.exports.AllShelves = AllShelves;
 
 
