@@ -40,37 +40,23 @@ awesomeIndex: 6
 } 
 ];
 
-/* creates a new array, "AwesomeIndex" */
-var AwesomeIndex = []; 
-/* loops through "table" getting the awesomeIndexes */
-var count = table.length;
-    for (i=0; i < count; i++ )                 
-    {
-/* places table[i].awesomeIndex into a new variable
-to tidy up my code */    	
-   var consolidate = table[i].awesomeIndex;
-/* if "consolidate" is not undefined, it gets pushed to
-"AwesomeIndex". If it is undefined, it does not*/    
-    if (consolidate != undefined)
-    {
-    	AwesomeIndex.push(consolidate), '';
-    }
-    	else {}
-}; 
-
+//loops through "table" getting the awesomeIndexes and adding them to var sum,
+//excluding the objects that don't have an awesome Index 
 var sum = 0;
-/* loops through "AwesomeIndex" adding the awesomeIndexes
-together and placing the total into "sum" */
-    var counter = AwesomeIndex.length;
-    for (i=0; i < counter; i++ )
+for (var i = 0; i < table.length; i++)
     {
-        sum += AwesomeIndex[i];
-};
-/* divdes the "sum" by the amount of awesomeIndexes */
-var average = sum / AwesomeIndex.length
+         if (table[i].awesomeIndex === undefined)
+             {
+                table.splice(i, 1);
+            }
+         sum += table[i].awesomeIndex;   
+    }
 
-/* loads the page before performing function, places
-the "average" in the span with the ide 'awesome-index'*/
+//divdes the "sum" by the amount of awesomeIndexes 
+var average = sum / table.length
+
+//loads the page before performing function, places
+//the "average" in the span with the ide 'awesome-index'
 window.onload = function(){
         document.getElementById('awesome-index').innerHTML = average;
   };
