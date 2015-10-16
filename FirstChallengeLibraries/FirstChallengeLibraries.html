@@ -4,31 +4,30 @@
     <title>Code Challenge One - Awesome Index w/ Libraries</title>
     <script src="https://cdn.jsdelivr.net/lodash/3.10.1/lodash.js"></script>
     <link type="text/css" rel="stylesheet" href="FirstChallengeLibraries.css" />
-    <script src="FirstChallengeLibraries.js"></script>
-    
+    <script src="FirstChallengeLibraries.js"></script> 
 	</head>
   <body>
-	    <table>
-	        <thead>
-	            <tr><th colspan="3" id="header" class="blue">Code Challenge One - Awesome Index</th></tr>
-	            <tr></tr>
-	        </thead>
-	        <tbody>
+      <table>
+          <thead>
+              <tr><th colspan="3" id="header" class="blue">Code Challenge One - Awesome Index</th></tr>
+              <tr></tr>
+          </thead>
+          <tbody>
               <tr class="gray">
-	                <td>Name</td>
-	                <td>Occupation</td>
-	                <td>Awesome Index</td>
-	            </tr>
-	            <tr>
-	                <td>Trinity</td>
-	                <td>programmer</td>
-	                <td>10</td>
-	            </tr>
-	            <tr>
-	                <td>Mater</td>
-	                <td>Tow Truck</td>
-	                <td>Unknown</td>
-	            </tr>
+                  <td>Name</td>
+                  <td>Occupation</td>
+                  <td>Awesome Index</td>
+              </tr> 
+              <tr>
+                  <td>Trinity</td>
+                  <td>programmer</td>
+                  <td>10</td>
+              </tr>
+              <tr>
+                  <td>Mater</td>
+                  <td>Tow Truck</td>
+                  <td>Unknown</td>
+              </tr>
                <tr>
                   <td>Number 5</td>
                   <td>Programmer</td>
@@ -49,24 +48,10 @@
                   <td>Programmer</td>
                   <td><p>6</p></td>
               </tr>
-	        </tbody>
-          <tr><th colspan="3" class="blue">Awesome-Index Average: <span id="awesome-index"></span></th></tr>
-	    </table>
+          </tbody>
+      </table>
+    <div style="width:920px; height:100px">Awesome-Index Average: <span id="awesome-index"></span></div>
   </body>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-   <script>
-   var sum = 0;
-   /*  $ is the jQuery function, .each calls up looping counter */
-$.each(AwesomeIndex,function() {
-  /*"this" is a variable, it works with the counter because a numeric value
-  would cause an error - like a stand-in object */
-    sum += this;
-});
- 
- var average = sum/AwesomeIndex.length;
-/* .html() sets the content of th identified element*/
-   $("#awesome-index").html(average);
-
-
-   </script>
- </html>
+ <script src="FirstChallengeLibraries.JS"></script>
+</html>

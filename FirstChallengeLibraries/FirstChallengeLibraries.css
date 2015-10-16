@@ -6,6 +6,7 @@ td {
 
 table, td {
 	border: 1px #70b8ff dashed;
+	margin: auto;
 }
 
 tr {
@@ -16,10 +17,25 @@ header {
 	background-color: #ADD8E6;
 }
 
+tbody div {
+	background-color: #D3D3D3;
+}
+
 .gray {
 	background-color: #D3D3D3;
 }
 
 .blue {
 	background-color: #ADD8E6;
+}
+
+body div {
+	border: 1px #70b8ff dashed;
+	background-color: #c1ffb6;
+	text-align: center;
+	margin-top: 6px;
+	margin: auto;
+	padding-top: 40px;
+	font-size: 40px;
+	font-weight: bold;
 }

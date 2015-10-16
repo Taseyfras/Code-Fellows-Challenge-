@@ -44,6 +44,17 @@ awesomeIndex: 6
 /* .pluck(collection, path) gets the property value of 'awesomeIndex'
 from 'table' */
 var result = _(table).pluck('awesomeIndex').value();
-/*.compact() creates an array without false values*/
+//.compact() creates an array without false values
 var AwesomeIndex = _.compact(result)
 
+var sum = 0;
+//$ is the jQuery function, .each calls up looping counter
+$.each(AwesomeIndex,function() {
+/*"this" is a variable, it works with the counter because a numeric value
+would cause an error - like a stand-in object*/
+sum += this;
+});
+ 
+var average = sum/AwesomeIndex.length;
+//.html() sets the content of th identified element
+ $("#awesome-index").html(average);
