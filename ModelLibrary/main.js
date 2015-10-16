@@ -7,24 +7,27 @@ own file. Add any additional functionality you think
 is appropriate. Create a "main" file that demonstrates 
 the capabilities of your library.*/
 
-/*require tells main.js to import functions from the named modules*/
+//require tells main.js to import functions from the named modules
 var Book = require("./Books.js").Book;
 var Shelf = require("./Shelves.js").Shelf;
 var Library = require("./Library.js").Library;
 
+//new Library is the keyword to invoke "Library" the constructor function
 var MainLibrary = new Library();
 
-var Top = new Shelf();
-var Middle = new Shelf();
-var Bottom = new Shelf();
-var Side = new Shelf();
+//new Shelf is the keyword to invoke "Shelf" the constructor function
+var Top = new Shelf("Top");
+var Middle = new Shelf("Middle");
+var Bottom = new Shelf("Bottom");
+var Side = new Shelf("Side");
 
+//function of a Library, adding a Shelf
 MainLibrary.AddShelf(Top);
 MainLibrary.AddShelf(Middle);
 MainLibrary.AddShelf(Bottom);
 MainLibrary.AddShelf(Side);
 
-/*new Book is the keyword to invoke "Book" the constructor function*/
+//new Book is the keyword to invoke "Book" the constructor function
 var Middlemarch = new Book ("Middlemarch", "Eliot", "George");
 var DifferentSeasons = new Book ("Different Seasons", "King", "Stephen");
 var ThePowerBroker = new Book ("The Power Broker", "Caro", "Robert");
@@ -36,6 +39,7 @@ var GoodOmens = new Book ("Good Omens", "Gaiman", "Neil");
 var GlitterAndGlue = new Book ("Glitter and Glue", "Corrigan", "Kelly");
 var DailyRituals = new Book ("Daily Rituals: How Artists Work", "Currey", "Mason");
 
+//function of a Shelf, adding a Book
 Top.AddBook(Middlemarch);
 Top.AddBook(DifferentSeasons);
 Top.AddBook(ThePowerBroker);
@@ -47,4 +51,15 @@ Bottom.AddBook(GoodOmens);
 Bottom.AddBook(GlitterAndGlue);
 Side.AddBook(DailyRituals);
 
-console.log(MainLibrary);
+//Full Library in JSON so it can be read easily in the console
+console.log(JSON.stringify(MainLibrary));
+
+//function of a Shelf, deleting a Book
+Side.DeleteBook(DailyRituals);
+
+console.log(JSON.stringify(MainLibrary));
+
+//function of a Library, deleting a Shelf
+MainLibrary.DeleteShelf(Side);
+
+console.log(JSON.stringify(MainLibrary));
