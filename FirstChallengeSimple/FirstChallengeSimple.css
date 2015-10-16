@@ -6,6 +6,7 @@ td {
 
 table, td {
 	border: 1px #70b8ff dashed;
+	margin: auto;
 }
 
 tr {
@@ -33,6 +34,7 @@ body div {
 	background-color: #c1ffb6;
 	text-align: center;
 	margin-top: 6px;
+	margin: auto;
 	padding-top: 40px;
 	font-size: 40px;
 	font-weight: bold;
